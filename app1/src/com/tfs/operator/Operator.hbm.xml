@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.tfs.operator.model.impl.OperatorImpl" table="tfs_operator">
+	
+		<id name="id" column="id" >
+            <generator class="increment" />
+        </id>
+         
+		<property name="name" column="name"/>
+ 		<property name="rank" column="rank"/>
+ 		
+        <!-- <set name="drivers" table="tfs_driver" 
+                inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="operator_id" not-null="true" />
+            </key>
+            <one-to-many class="com.tfs.driver.model.impl.DriverImpl" />
+        </set> -->
+        
+        <set name="drivers" cascade="all" >
+			<key column="operator_id" />
+			<one-to-many class="com.tfs.driver.model.impl.DriverImpl" />
+		</set>
+    </class>
+</hibernate-mapping>
+       

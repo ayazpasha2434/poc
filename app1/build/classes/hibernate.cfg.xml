@@ -20,5 +20,7 @@
     <property name="current_session_context_class">thread</property>
  
   	<mapping resource="com/tfs/driver/Driver.hbm.xml" />
+  	<mapping resource="com/tfs/operator/Operator.hbm.xml" />
+  	
 	</session-factory>
 </hibernate-configuration>  

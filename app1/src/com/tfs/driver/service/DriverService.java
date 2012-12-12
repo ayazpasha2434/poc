@@ -1,9 +1,9 @@
 package com.tfs.driver.service;
 
-import com.tfs.core.service.EntityService;
+import com.tfs.core.service.BaseService;
 import com.tfs.driver.model.impl.DriverImpl;
 
-public interface DriverService extends EntityService {
+public interface DriverService extends BaseService {
 
 	public DriverImpl getDriverDetails(long id);
 	

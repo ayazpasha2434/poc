@@ -2,10 +2,10 @@ package com.tfs.driver.service.impl;
 
 import java.util.Collections;
 
+import com.tfs.common.Util;
+import com.tfs.core.model.BaseModel;
 import com.tfs.driver.model.impl.DriverImpl;
 import com.tfs.driver.service.DriverService;
-import com.tfs.common.Util;
-import com.tfs.core.model.Entity;
 
 public class DriverServiceImpl implements DriverService {
 
@@ -23,12 +23,12 @@ public class DriverServiceImpl implements DriverService {
 		
 	}
 
-	public Entity update(Entity entity) {
+	public BaseModel update(BaseModel entity) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	public Entity get(long id) {
+	public BaseModel get(long id) {
 		// TODO Auto-generated method stub
 		return null;
 	}

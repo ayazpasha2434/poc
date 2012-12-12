@@ -1,6 +1,7 @@
 package com.tfs.driver.model.impl;
 
 import com.tfs.driver.model.Driver;
+import com.tfs.operator.model.impl.OperatorImpl;
 
 public class DriverImpl implements Driver {
 
@@ -9,6 +10,8 @@ public class DriverImpl implements Driver {
 	private int operatorId;
 	private String vehicleDescription;
 	private int available;
+	
+	private OperatorImpl operator;
 	
 	public DriverImpl() {}
 	
@@ -52,6 +55,14 @@ public class DriverImpl implements Driver {
 	}
 	public void setOperatorId(int operatorId) {
 		this.operatorId = operatorId;
+	}
+
+	public OperatorImpl getOperator() {
+		return operator;
+	}
+
+	public void setOperator(OperatorImpl operator) {
+		this.operator = operator;
 	}
 	
 }

@@ -3,6 +3,10 @@
   PUBLIC "-//SPRING//DTD BEAN//EN"
   "http://www.springframework.org/dtd/spring-beans.dtd">
 <beans>
-	<bean id="driverService" class="com.tfs.driver.service.impl.DriverServiceImpl"/>
+	<bean id="driverService" 
+		class="com.tfs.driver.service.impl.DriverServiceImpl"/>
 	
+	<bean id="operatorService"
+		class="com.tfs.operator.service.impl.OperatorServiceImpl"/>
+		
 </beans>

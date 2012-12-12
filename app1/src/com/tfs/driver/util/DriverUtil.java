@@ -8,8 +8,8 @@ public class DriverUtil {
 
 	public static Driver get(long id) {
 		
-		DriverService driverDAO = (DriverService) Util.getObject("driverService");
-		return new Driver(driverDAO.getDriverDetails(id));
+		DriverService driverService = (DriverService) Util.getObject("driverService");
+		return new Driver(driverService.getDriverDetails(id));
 	}
 	
 }

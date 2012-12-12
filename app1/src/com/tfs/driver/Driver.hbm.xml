@@ -5,11 +5,16 @@
 <hibernate-mapping>
  <class name="com.tfs.driver.model.impl.DriverImpl" table="tfs_driver">
 	 <id name="id" column="id" >
-	 	<generator class="increment"/>
+	 	<generator class="native"/>
 	 </id>
 	 <property name="name" column="name" />
 	 <property name="operatorId" column="operator_id" />
 	 <property name="vehicleDescription" column="vehicle_description" />
 	 <property name="available" column="available" />
+	 
+	<!--  <many-to-one name="operator" class="com.tfs.operator.model.impl.OperatorImpl" fetch="select">
+		<column name="id" not-null="true" />
+	</many-to-one> -->
+	
  </class>
 </hibernate-mapping>
